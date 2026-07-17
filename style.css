@@ -1,0 +1,971 @@
+/* =========================
+   GOOGLE FONT & RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f6fbf7;
+    color:#333;
+    overflow-x:hidden;
+}
+
+/* =========================
+   COLORS
+========================= */
+
+:root{
+
+    --primary:#0b6e4f;
+    --secondary:#d4af37;
+    --dark:#063b2e;
+    --light:#ffffff;
+    --text:#444;
+    --bg:#f6fbf7;
+
+}
+
+/* =========================
+   LINKS
+========================= */
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+ul{
+    list-style:none;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container{
+
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    padding:18px 8%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:rgba(11,110,79,.95);
+
+    backdrop-filter:blur(10px);
+
+    z-index:999;
+
+    transition:.3s;
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:white;
+
+}
+
+.logo i{
+
+    font-size:30px;
+
+    color:var(--secondary);
+
+}
+
+.logo h2{
+
+    font-size:24px;
+
+    font-weight:700;
+
+}
+
+.nav-links{
+
+    display:flex;
+
+    gap:35px;
+
+}
+
+.nav-links a{
+
+    color:white;
+
+    font-weight:500;
+
+    transition:.3s;
+
+    position:relative;
+
+}
+
+.nav-links a:hover{
+
+    color:var(--secondary);
+
+}
+
+.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-6px;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--secondary);
+
+    transition:.3s;
+
+}
+
+.nav-links a:hover::after{
+
+    width:100%;
+
+}
+
+.menu-btn{
+
+    display:none;
+
+    color:white;
+
+    font-size:28px;
+
+    cursor:pointer;
+
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
+
+    background:
+
+    linear-gradient(rgba(0,0,0,.55),
+    rgba(0,0,0,.55)),
+
+    url("images/hero.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    padding:120px 20px;
+
+}
+
+.hero-content{
+
+    max-width:850px;
+
+    animation:fadeUp 1.2s ease;
+
+}
+
+.hero h1{
+
+    font-size:60px;
+
+    line-height:1.2;
+
+    margin-bottom:20px;
+
+}
+
+.hero p{
+
+    font-size:20px;
+
+    line-height:1.8;
+
+    margin-bottom:35px;
+
+}
+
+.btn{
+
+    display:inline-block;
+
+    background:var(--secondary);
+
+    color:#111;
+
+    padding:16px 42px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+}
+
+.btn:hover{
+
+    transform:translateY(-5px);
+
+    background:#f1c84b;
+
+}
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+section{
+
+    padding:90px 0;
+
+}
+
+section h2{
+
+    text-align:center;
+
+    font-size:40px;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+    position:relative;
+
+}
+
+section h2::after{
+
+    content:"";
+
+    width:80px;
+
+    height:4px;
+
+    background:var(--secondary);
+
+    display:block;
+
+    margin:12px auto;
+
+    border-radius:10px;
+
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:900px){
+
+.nav-links{
+
+    display:none;
+
+}
+
+.menu-btn{
+
+    display:block;
+
+}
+
+.hero h1{
+
+    font-size:42px;
+
+}
+
+.hero p{
+
+    font-size:18px;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.logo h2{
+
+    font-size:18px;
+
+}
+
+.hero h1{
+
+    font-size:34px;
+
+}
+
+.hero p{
+
+    font-size:16px;
+
+}
+
+.btn{
+
+    padding:14px 30px;
+
+}
+
+section h2{
+
+    font-size:30px;
+
+}
+
+}
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about{
+    background:#ffffff;
+}
+
+.about p{
+    max-width:900px;
+    margin:25px auto 0;
+    text-align:center;
+    line-height:2;
+    color:var(--text);
+    font-size:18px;
+}
+
+/* =========================
+   TEACHER SECTION
+========================= */
+
+.teacher{
+    background:#eef8f2;
+}
+
+.teacher .container{
+    max-width:900px;
+    text-align:center;
+}
+
+.teacher h3{
+    color:var(--secondary);
+    font-size:32px;
+    margin:20px 0;
+}
+
+.teacher p{
+    color:var(--text);
+    line-height:2;
+    font-size:18px;
+}
+
+/* =========================
+   COURSES SECTION
+========================= */
+
+.courses{
+    background:#ffffff;
+}
+
+.course-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+
+    margin-top:50px;
+
+}
+
+.course-card{
+
+    background:#ffffff;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    text-align:center;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    transition:.4s;
+
+    border-top:5px solid var(--primary);
+
+    animation:fadeUp 1s ease;
+
+}
+
+.course-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.15);
+
+}
+
+.course-card i{
+
+    font-size:55px;
+
+    color:var(--secondary);
+
+    margin-bottom:20px;
+
+}
+
+.course-card h3{
+
+    color:var(--primary);
+
+    margin-bottom:15px;
+
+    font-size:24px;
+
+}
+
+.course-card p{
+
+    color:var(--text);
+
+    line-height:1.8;
+
+}
+
+/* =========================
+   WHY CHOOSE US
+========================= */
+
+.why-us{
+
+    background:
+    linear-gradient(rgba(11,110,79,.94),
+    rgba(6,59,46,.94));
+
+    color:white;
+
+}
+
+.why-us h2{
+
+    color:white;
+
+}
+
+.why-us h2::after{
+
+    background:var(--secondary);
+
+}
+
+.why-us ul{
+
+    max-width:700px;
+
+    margin:40px auto 0;
+
+}
+
+.why-us li{
+
+    background:rgba(255,255,255,.08);
+
+    padding:18px 25px;
+
+    margin-bottom:18px;
+
+    border-left:5px solid var(--secondary);
+
+    border-radius:12px;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+.why-us li:hover{
+
+    transform:translateX(10px);
+
+    background:rgba(255,255,255,.14);
+
+}
+
+/* =========================
+   HOVER ANIMATION
+========================= */
+
+.course-card:hover i{
+
+    transform:scale(1.15);
+
+    transition:.4s;
+
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:900px){
+
+.course-grid{
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+}
+
+.teacher h3{
+
+    font-size:28px;
+
+}
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:700px){
+
+.course-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.course-card{
+
+    padding:30px 20px;
+
+}
+
+.teacher h3{
+
+    font-size:24px;
+
+}
+
+.about p,
+.teacher p{
+
+    font-size:16px;
+
+}
+
+.why-us li{
+
+    font-size:16px;
+
+}
+
+}
+
+/* =========================
+   CONTACT SECTION
+========================= */
+
+.contact{
+    background:#f6fbf7;
+}
+
+.contact .container{
+    max-width:700px;
+}
+
+.contact form{
+    background:#ffffff;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    margin-top:40px;
+}
+
+.contact input,
+.contact textarea{
+    width:100%;
+    padding:16px;
+    margin-bottom:20px;
+    border:2px solid #e4e4e4;
+    border-radius:12px;
+    outline:none;
+    font-size:16px;
+    transition:.3s;
+    resize:none;
+    font-family:'Poppins',sans-serif;
+}
+
+.contact input:focus,
+.contact textarea:focus{
+    border-color:var(--primary);
+    box-shadow:0 0 10px rgba(11,110,79,.2);
+}
+
+.contact button{
+    width:100%;
+    padding:18px;
+    border:none;
+    border-radius:50px;
+    background:var(--primary);
+    color:white;
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.contact button:hover{
+    background:var(--dark);
+    transform:translateY(-4px);
+}
+
+/* =========================
+   FLOATING WHATSAPP
+========================= */
+
+.whatsapp{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+
+    width:65px;
+    height:65px;
+
+    border-radius:50%;
+
+    background:#25D366;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    color:white;
+    font-size:32px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+    z-index:999;
+
+    transition:.3s;
+
+    animation:float 2s infinite;
+}
+
+.whatsapp:hover{
+    transform:scale(1.1);
+    background:#20ba5a;
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-10px);
+}
+
+100%{
+transform:translateY(0);
+}
+
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+background:var(--dark);
+
+color:white;
+
+text-align:center;
+
+padding:60px 20px;
+
+}
+
+footer h3{
+
+font-size:30px;
+
+margin-bottom:15px;
+
+color:var(--secondary);
+
+}
+
+footer p{
+
+line-height:2;
+
+opacity:.9;
+
+}
+
+footer p:last-child{
+
+margin-top:15px;
+
+font-size:15px;
+
+opacity:.7;
+
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar{
+width:10px;
+}
+
+::-webkit-scrollbar-track{
+background:#e7e7e7;
+}
+
+::-webkit-scrollbar-thumb{
+background:var(--primary);
+border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+background:var(--dark);
+}
+
+/* =========================
+   FADE ANIMATION
+========================= */
+
+.reveal{
+
+opacity:0;
+
+transform:translateY(50px);
+
+transition:1s;
+
+}
+
+.reveal.active{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+.contact form{
+
+padding:25px;
+
+}
+
+.contact input,
+.contact textarea{
+
+font-size:15px;
+
+}
+
+.contact button{
+
+font-size:16px;
+
+padding:16px;
+
+}
+
+.whatsapp{
+
+width:58px;
+height:58px;
+
+font-size:28px;
+
+right:18px;
+bottom:18px;
+
+}
+
+footer{
+
+padding:45px 20px;
+
+}
+
+footer h3{
+
+font-size:24px;
+
+}
+
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media(max-width:480px){
+
+.contact form{
+
+padding:20px;
+
+}
+
+.contact input,
+.contact textarea{
+
+padding:14px;
+
+}
+
+footer h3{
+
+font-size:22px;
+
+}
+
+}
+
+/* Mobile Navigation */
+
+@media(max-width:900px){
+
+.nav-links{
+
+position:absolute;
+
+top:80px;
+
+left:0;
+
+width:100%;
+
+background:#0b6e4f;
+
+flex-direction:column;
+
+text-align:center;
+
+padding:25px 0;
+
+display:none;
+
+}
+
+.nav-links.active{
+
+display:flex;
+
+}
+
+.nav-links li{
+
+margin:15px 0;
+
+}
+
+}
