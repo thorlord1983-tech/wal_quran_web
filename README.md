@@ -46,14 +46,6 @@ wal-qalaam-quran-academy/
 │── images/
 ```
 
-## 🚀 Deployment
-
-This website is ready to deploy on **Vercel**.
-
-1. Push the project to GitHub.
-2. Import the repository into Vercel.
-3. Click **Deploy**.
-
 ## 📞 Contact
 
 **WhatsApp:** +92 332 6574261
