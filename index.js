@@ -118,9 +118,18 @@ if (form) {
 
         e.preventDefault();
 
-        alert("Thank you! Your free trial request has been received. We will contact you soon.");
+        const formData = new FormData(form);
+        const message = [
+            "Assalamu Alaikum, I would like to book a Quran class.",
+            "",
+            `Name: ${formData.get("name")}`,
+            `Email: ${formData.get("email")}`,
+            `Phone: ${formData.get("phone")}`,
+            `Course and preferred timings: ${formData.get("details") || "Not provided"}`
+        ].join("\n");
 
-        form.reset();
+        const whatsappUrl = `https://wa.me/923326574261?text=${encodeURIComponent(message)}`;
+        window.open(whatsappUrl, "_blank", "noopener,noreferrer");
 
     });
 
