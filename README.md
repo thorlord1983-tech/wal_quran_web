@@ -50,10 +50,8 @@ wal-qalaam-quran-academy/
 
 **WhatsApp:** +92 332 6574261
 
-## 📄 License
+## 🚀 Deployment
 
-This project is for the official website of **Wal Qalaam Quran Academy**. Please do not redistribute or claim it as your own without permission.
-
----
+On **Vercel**.
 
 **May Allah ﷻ bless everyone seeking knowledge of the Holy Quran.**
