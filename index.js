@@ -119,12 +119,20 @@ if (form) {
         e.preventDefault();
 
         const formData = new FormData(form);
+        const phone = String(formData.get("phone") || "");
+        const phoneDigits = phone.replace(/\D/g, "");
+
+        if (!/^\+?[0-9 ()-]+$/.test(phone) || phoneDigits.length < 7 || phoneDigits.length > 15) {
+            alert("Please enter a valid phone number with 7 to 15 digits.");
+            return;
+        }
+
         const message = [
             "Assalamu Alaikum, I would like to book a Quran class.",
             "",
             `Name: ${formData.get("name")}`,
             `Email: ${formData.get("email")}`,
-            `Phone: ${formData.get("phone")}`,
+            `Phone: ${phone}`,
             `Course and preferred timings: ${formData.get("details") || "Not provided"}`
         ].join("\n");
 
